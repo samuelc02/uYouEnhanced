@@ -141,8 +141,8 @@ jobs:
           YOUTUBE_URL: ${{ env.URL_YT }}
 
       - name: Patch CFLAGS for Clang compatibility
-        run:
-            echo "CFLAGS += -Wno-error=incompatible-pointer-types" >> Tweaks/Return-YouTube-Dislikes/Makefile
+        run: |
+            echo "CFLAGS += -Wno-error=incompatible-pointer-types" >> main/Tweaks/Return-YouTube-Dislikes/Makefile
 
       - name: Fix compiling & Build Package
         id: build_package
